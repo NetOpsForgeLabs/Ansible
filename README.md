@@ -47,12 +47,8 @@ Ansible turns this into: write once, review, test, apply to all, and keep it in 
 - **Scheduled operations:** Snapshot, patch, or clean up unused resources.
 
 A strong real-world pattern for you: one playbook that creates a cloud VPN gateway and also configures the matching tunnel on your on-prem router. Doing that manually across two consoles is error-prone. Ansible does both from one place.
+<img width="969" height="303" alt="image" src="https://github.com/user-attachments/assets/33f080cb-de61-40fe-b55d-e3bbaa7d2a39" />
 
-Where Ansible fits among the tools
-Tool	Best at
-Ansible	Configuration management and orchestration, with a very low learning curve
-Terraform	Creating and destroying cloud infrastructure (declarative, with state file)
-Python/Netmiko/Nornir	Custom logic and complex parsing
 
 They are complementary. Many teams use Terraform to build cloud infrastructure and Ansible to configure what runs on or around it. Ansible can also provision cloud resources, but it keeps no state file the way Terraform does.
 
