@@ -7,7 +7,6 @@ What it is
 Ansible is an open-source automation tool (created by Michael DeHaan, now owned by Red Hat). You write plain-text YAML files describing what you want, and Ansible makes your infrastructure match that description.
 
 Three properties explain its popularity:
-
 **Agentless**: nothing to install on the target. SSH or an API is enough.
 **Human-readable**: YAML playbooks read almost like a change plan.
 **Idempotent**: running it repeatedly is safe. It only changes what is out of line.
