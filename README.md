@@ -15,6 +15,7 @@ Three properties explain its popularity:
 **Idempotent**: running it repeatedly is safe. It only changes what is out of line.
 
 
+
 <img width="983" height="426" alt="image" src="https://github.com/user-attachments/assets/a487d356-0b3a-4a90-8825-321be7a49fcc" />
 
 Ansible turns this into: write once, review, test, apply to all, and keep it in Git. The playbook becomes your source of truth and documentation.
