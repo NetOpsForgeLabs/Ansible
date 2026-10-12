@@ -22,24 +22,29 @@ Device replacement	Rebuilding the config from memory or old backups
 
 Ansible turns this into: write once, review, test, apply to all, and keep it in Git. The playbook becomes your source of truth and documentation.
 
-Network use cases (your daily world)
-Config backup: Pull running configs from all devices nightly and store them in Git.
-Bulk changes: Push NTP, SNMP, syslog, banners, AAA, or ACLs to hundreds of devices consistently.
-VLAN/interface provisioning: Create a VLAN on 50 switches in one run.
-Compliance audit: Check that every device has the required config and report the ones that don’t.
-Health checks and reporting: Collect show version, interface errors, BGP neighbor state, and build an inventory report. Useful before and after a change window.
-Pre/post-change validation: Capture state before, apply the change, capture after, and compare.
-OS upgrades: Automate image copy, verify checksum, set boot variable, reload, verify.
-Day-0 provisioning: Generate a full config from a template and push it to a new device.
-Firewall and load balancer rules: Manage Palo Alto, Fortinet, Check Point, F5 policy objects and rules.
-Multi-vendor consistency: Use one workflow for Cisco, Juniper, Arista, and others.
-Cloud use cases
-Provisioning: Create VPCs/VNets, subnets, security groups, route tables, VMs, and load balancers on AWS, Azure, or GCP using the cloud collections (amazon.aws, azure.azcollection, google.cloud).
-Hybrid connectivity: Build site-to-site VPNs or Direct Connect/ExpressRoute attachments, and configure your on-prem router side in the same playbook.
-Cloud networking security: Standardize security group and NSG rules, and audit for risky open ports.
-Server configuration after provisioning: Install packages, harden the OS, deploy apps.
-Multi-cloud: The same tool and skills work across all providers.
-Scheduled operations: Snapshot, patch, or clean up unused resources.
+# Ansible Use Cases: Network and Cloud
+
+## Network Use Cases (Your Daily World)
+
+- **Config backup:** Pull running configs from all devices nightly and store them in Git.
+- **Bulk changes:** Push NTP, SNMP, syslog, banners, AAA, or ACLs to hundreds of devices consistently.
+- **VLAN/interface provisioning:** Create a VLAN on 50 switches in one run.
+- **Compliance audit:** Check that every device has the required config, and report the ones that don't.
+- **Health checks and reporting:** Collect `show version`, interface errors, and BGP neighbor state, then build an inventory report. This is useful before and after a change window.
+- **Pre/post-change validation:** Capture the state before, apply the change, capture the state after, and compare.
+- **OS upgrades:** Automate the image copy, verify the checksum, set the boot variable, reload, and verify.
+- **Day-0 provisioning:** Generate a full config from a template and push it to a new device.
+- **Firewall and load balancer rules:** Manage policy objects and rules on Palo Alto, Fortinet, Check Point, and F5.
+- **Multi-vendor consistency:** Use one workflow for Cisco, Juniper, Arista, and others.
+
+## Cloud Use Cases
+
+- **Provisioning:** Create VPCs/VNets, subnets, security groups, route tables, VMs, and load balancers on AWS, Azure, or GCP, using the cloud collections (`amazon.aws`, `azure.azcollection`, `google.cloud`).
+- **Hybrid connectivity:** Build site-to-site VPNs or Direct Connect/ExpressRoute attachments, and configure your on-prem router side in the same playbook.
+- **Cloud networking security:** Standardize security group and NSG rules, and audit for risky open ports.
+- **Server configuration after provisioning:** Install packages, harden the OS, and deploy apps.
+- **Multi-cloud:** The same tool and skills work across all providers.
+- **Scheduled operations:** Snapshot, patch, or clean up unused resources.
 
 A strong real-world pattern for you: one playbook that creates a cloud VPN gateway and also configures the matching tunnel on your on-prem router. Doing that manually across two consoles is error-prone. Ansible does both from one place.
 
