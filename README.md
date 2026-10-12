@@ -9,16 +9,7 @@ Three properties explain its popularity:
 Agentless: nothing to install on the target. SSH or an API is enough.
 Human-readable: YAML playbooks read almost like a change plan.
 Idempotent: running it repeatedly is safe. It only changes what is out of line.
-Why it is needed: the problem it solves
-
-Think about your daily work without automation:
-
-Manual problem	Result
-Changing 300 switches one by one	Takes days, and people make typos
-Every engineer configures slightly differently	Configuration drift: no two devices match
-Change done at 2 AM, no record of what was typed	No audit trail, hard to roll back
-“Is NTP/SNMP/AAA correct everywhere?”	Someone has to log in to every device to check
-Device replacement	Rebuilding the config from memory or old backups
+<img width="983" height="426" alt="image" src="https://github.com/user-attachments/assets/a487d356-0b3a-4a90-8825-321be7a49fcc" />
 
 Ansible turns this into: write once, review, test, apply to all, and keep it in Git. The playbook becomes your source of truth and documentation.
 
