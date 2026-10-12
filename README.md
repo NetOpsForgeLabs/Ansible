@@ -64,4 +64,3 @@ Simple summary
 
 Ansible = a tool that logs in to many devices for you and makes them match the configuration you wrote down, safely and repeatably.
 
-You’re ready for the Lesson 1 example now. If you tell me which vendors you use and whether you have a lab (EVE-NG, GNS3, CML), I’ll tune the later lessons to your environment.
